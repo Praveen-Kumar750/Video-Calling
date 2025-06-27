@@ -21,5 +21,12 @@ export const upsertStreamUser = async (userData) => {
 //todo later
 
 export const generateStreamToken = (userId) => {
+  try {
+    const token=generateStreamToken(requestAnimationFrame.user.id);
+    res.status(200).json({token});
+  } catch (error) {
+    console.log("error in getstream controller: " ,error.message);
+        res.status(500).json({message: "Internal Server Error"});
 
+  }
 };
